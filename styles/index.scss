@@ -1,12 +1,30 @@
+$primary-background: #ffb6b6;
+// this is an example of a variable
+
+@mixin background-stuff {
+    background-color: $primary-background;
+    padding: 16px;
+    text-align: center;
+}
+// this is an example of a mixin
+// you need to @include the mixin where you want it
+
+
+
 body {
     margin: 0;
     background-color: #a5a5a5;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // these settings, including min-height,
+    // makes footer go to the bottom
 }
 
 header {
-    background-color: #ffb6b6;
-    padding: 16px;
-    text-align: center;
+    @include background-stuff
 
     .logo-name {
         margin-bottom: 24px;
@@ -34,9 +52,31 @@ header {
             text-decoration: none;
             color: #4b8ea2;
         }
+    }
+}
 
+footer {
+    @include background-stuff();
 
+    .social-media {
+        display: flex;
+        justify-content: space-around;
+
+        margin-bottom: 24px;
+
+        a {
+            i {
+                color: #1C3C5C;
+                font-size: 24px;
+            }
+        }
     }
 
+    .info {
+        color: rgb(41, 40, 40);
 
+        p {
+            margin: 5px 0;
+        }
+    }
 }

@@ -1,6 +1,10 @@
 body {
   margin: 0;
   background-color: #a5a5a5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -29,4 +33,10 @@ header .nav-items {
 header .nav-items a {
   text-decoration: none;
   color: #4b8ea2;
+}
+
+footer {
+  background-color: #ffb6b6;
+  padding: 16px;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
